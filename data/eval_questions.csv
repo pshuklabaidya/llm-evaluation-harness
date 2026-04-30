@@ -1,0 +1,11 @@
+id,question,expected_answer,required_context
+1,"What is groundedness in LLM evaluation?","Groundedness measures whether a generated answer is supported by the provided context.","groundedness"
+2,"What does hallucination risk measure?","Hallucination risk measures whether an answer contains invented unsupported or unverifiable claims.","hallucination"
+3,"Why does answer relevance matter?","Answer relevance matters because the response should directly address the user question and avoid unrelated topics.","answer relevance"
+4,"What does completeness measure?","Completeness measures whether an answer covers the essential points required by the expected answer.","completeness"
+5,"Why is context usefulness important in RAG evaluation?","Context usefulness is important because poor retrieval can cause weak answers even when generation works correctly.","context usefulness"
+6,"What is regression testing used for in LLM evaluation?","Regression testing compares results across versions to detect whether system changes improved or degraded quality.","regression testing"
+7,"Why can rule-based evaluation be useful for a portfolio project?","Rule-based evaluation is useful because the scoring logic is transparent inspectable explainable and testable.","rule-based evaluation"
+8,"What is synthetic evaluation data?","Synthetic evaluation data is artificially created data used for safe testing and demonstration without private or confidential records.","synthetic evaluation data"
+9,"What does RAG evaluation measure?","RAG evaluation measures both retrieval quality and generation quality including whether answers use useful context and avoid unsupported claims.","rag evaluation"
+10,"What is a drawback of LLM-as-judge evaluation?","LLM-as-judge evaluation can introduce cost variability and judge-model bias.","llm-as-judge evaluation"

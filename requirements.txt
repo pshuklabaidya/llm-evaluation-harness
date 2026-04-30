@@ -1,5 +1,5 @@
-streamlit
 pandas
-pytest
-ruff
+scikit-learn
+streamlit
 python-dotenv
+pytest
