@@ -1,150 +1,53 @@
-# AI Project Template
+# LLM Evaluation Harness
 
-Reusable Streamlit-first template for building AI portfolio projects focused on Agentic RAG, LLM evaluation, synthetic-data demos, AI automation, and decision-support workflows.
+A lightweight evaluation framework for testing LLM and RAG system outputs across relevance, groundedness, completeness, hallucination risk, and regression behavior.
 
-> Status: Template repository for AI portfolio projects. This repository is not a finished AI application.
+## Overview
 
-## Purpose
+LLM Evaluation Harness provides a practical evaluation workflow for retrieval-augmented generation and language-model applications. The framework uses synthetic test questions, a controlled knowledge base, deterministic retrieval, answer generation, rubric-based scoring, and markdown reporting.
 
-This template provides a consistent starting structure for AI portfolio repositories that demonstrate:
+The MVP is designed to run without a paid API key through a mock LLM pipeline. Optional API-based model evaluation can be added later.
 
-- Clear business problem framing
-- Synthetic-data disclosure
-- Streamlit-first demo design
-- Reproducible setup instructions
-- Tests and quality checks
-- Evaluation notes
-- Executive-polished documentation
-- Responsible AI boundaries
+## Portfolio Focus
 
-## Intended Use
+This repository demonstrates applied AI engineering skills in:
 
-Use this template to create portfolio projects such as:
+- LLM evaluation
+- RAG evaluation
+- Retrieval quality testing
+- Groundedness assessment
+- Hallucination detection
+- Synthetic evaluation datasets
+- Regression testing for AI workflows
+- Streamlit-based stakeholder demos
 
-- Agentic RAG customer support assistant
-- LLM evaluation harness
-- Policy or financial document RAG assistant
-- Product analytics copilot
-- Compliance-aware document assistant
-- AI workflow automation dashboard
-- Synthetic business intelligence demo
+## Core Features
 
-## Template Principles
-
-Every project created from this template should follow these principles:
-
-- Use synthetic or public data only unless clear data rights exist.
-- Label synthetic datasets clearly.
-- Include setup instructions.
-- Include tests.
-- Include limitations.
-- Include evaluation notes.
+- Load synthetic evaluation questions from CSV
+- Retrieve relevant context from a small knowledge base
+- Generate answers through a mock LLM pipeline
+- Score responses using transparent rubric logic
+- Flag unsupported claims and hallucination risk
+- Produce a markdown evaluation report
+- Support future extension to OpenAI, Anthropic, or IBM watsonx models
 
 ## Repository Structure
 
 ```text
-.
-├── app/
-├── src/
-├── tests/
-├── data/synthetic/
-├── docs/
-├── evals/
-├── scripts/
-├── .github/workflows/
+llm-evaluation-harness/
+├── app.py
 ├── README.md
-├── SECURITY.md
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
 ├── requirements.txt
-├── pyproject.toml
-└── .env.example
-```
-
-## Folder And File Guide
-
-| Path | Purpose |
-|---|---|
-| `app/` | Streamlit app entrypoints and demo UI files |
-| `src/` | Reusable application logic, RAG pipelines, agents, schemas, and utilities |
-| `tests/` | Unit tests, smoke tests, and regression checks |
-| `data/synthetic/` | Clearly labeled synthetic datasets used for demo workflows |
-| `docs/` | Architecture notes, data dictionaries, diagrams, implementation notes, and evaluation summaries |
-| `evals/` | Evaluation datasets, metrics scripts, and result summaries |
-| `scripts/` | Data generation, ingestion, evaluation, and setup scripts |
-| `.github/workflows/` | GitHub Actions workflows for tests and quality checks |
-
-## Recommended Project README Pattern
-
-Each generated project should replace this template README with a project-specific README containing:
-
-- Project title
-- One-sentence value proposition
-- Demo status
-- Synthetic-data disclosure
-- Business problem
-- Architecture overview
-- Features
-- Tech stack
-- Quickstart
-- Example usage
-- Evaluation
-- Tests
-- Limitations
-- Roadmap
-- License
-
-## Synthetic-Data Disclosure Template
-
-Use language like this in every generated project:
-
-> This project uses synthetic data for educational and portfolio demonstration purposes. It does not contain private customer data, employer data, confidential records, or production exports.
-
-## Recommended Tech Stack
-
-Default stack:
-
-- Python
-- Streamlit
-- Pandas
-- Pytest
-- Ruff
-- GitHub Actions
-
-Optional additions by project type:
-
-- LangChain or LlamaIndex for RAG workflows
-- Chroma or Qdrant for vector retrieval
-- FastAPI for API-first demos
-- Docker for stronger reproducibility
-- MkDocs or GitHub Pages for expanded documentation
-
-## Quality Checklist
-
-Before featuring any project created from this template:
-
-- [ ] README explains the business problem clearly.
-- [ ] Synthetic data is disclosed clearly.
-- [ ] Setup instructions work from a fresh clone.
-- [ ] Tests exist and pass.
-- [ ] GitHub Actions workflow runs successfully.
-- [ ] Limitations are explicit.
-- [ ] Evaluation notes explain quality checks, metrics, and failure cases.
-- [ ] No real secrets are committed.
-- [ ] No unsupported production claims appear.
-- [ ] Demo scope is honest and recruiter-friendly.
-
-## Recommended First Project
-
-**Agentic Support Copilot**
-
-A Streamlit-first Agentic RAG portfolio demo using synthetic SaaS support tickets to demonstrate triage, retrieval, response drafting, evaluation, documentation, and responsible AI boundaries.
-
-## Responsible Use
-
-This template is for legitimate educational and portfolio demonstrations. It should not be used to create deceptive, malicious, privacy-invasive, credential-stealing, exploit-generating, surveillance, spam, or security-sensitive tooling.
-
-## License
-
-MIT
+├── .env.example
+├── data/
+│   ├── eval_questions.csv
+│   └── knowledge_base.md
+├── results/
+│   └── sample_evaluation_report.md
+├── src/
+│   ├── evaluator.py
+│   ├── retrieval.py
+│   ├── scoring.py
+│   ├── mock_llm.py
+│   └── report.py
+└── tests/
